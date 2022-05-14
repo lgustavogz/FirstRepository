@@ -1,0 +1,57 @@
+body { background-color: lightgray;   font-family: Arial, Helvetica, sans-serif;}
+
+main { background-color:white; color: preto; border-radius: 20px; box-shadow: 10px 10px 10px #A0BDCF; padding: 20px;}
+
+h1 { background-color: #003340;     color: #ffffff;   font-size: 27px;}
+
+h2 { background-color: #006680;     font-size: 23px;    color: white;}
+
+h3 { background-color: #00CCFF;     font-size: 18px;    color: white;}
+
+h4 { background-color: #006680;   font-size: 16px;    color: white;}
+
+footer { font-size: 22px;   color: #0099BF;}
+
+article {background-color: #0099BF; border: 3px solid #365175; text-align: center; height: auto; width: auto;}
+
+p { text-align: justify;  text-indent: 20px; }
+
+p2:hover {background-color: black; color: white;} /* : pseudo-class hover*/
+
+div{ background-color:#5986C2; border: 3px solid #365175; text-align: center; height: 200px; width: 200px; }   
+
+div > p { display: none; } /* > children (p dentro de div*/
+
+div:hover > p {display: block; background-color: #C2603A; color: #F6C5A0;} /* Quando passa o mouse em cima torna visível o texto escondido div > p */
+
+div:hover {background-color: black; color: white;}
+
+a {color: #323C8F; text-decoration: none; font-weight: bold;} /* retirar sublinhado */
+    
+a:visited {color: red;} /* : pseudo-class visited*/
+
+a:active {color: green;} /* : pseudo-class active*/
+
+a::before {content: '→' } /* :: pseudo-element before */
+
+a::after { content: '←' } /* :: pseudo-element after */
+ 
+.especial::before {content: '❇'; color: #1D5BA4;} /* .especial é uma classe e :: pseudo-element before */
+
+.especial::after {content: '❇'; color: #2AA0C6;} /* .especial é uma classe e :: pseudo-element after */
+
+h4#boxlevel {background-color: #323C8F; 
+        color: #00CCFF;
+        height: 40px; 
+        width: 170px; 
+        border-width: 7px; 
+        border-style: solid; 
+        border-color: darkslategray; 
+        padding: 10px 10px 10px 10px; ;/* Top Right Bottom Left */
+        margin: auto; 
+        outline-width: 15px;
+        outline-style: solid;
+        outline-color: salmon; }
+
+p#boxlevel2 { background-color: #365175; 
+         border: 10px solid darkcyan; color: white;} /* Width Style Color */ 

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> <!-- Elemento entre colchete angular é uma TAG ou Marca  -->
+    <meta charset="UTF-8"> <!-- Padrão de caractéres que suporta acentuação -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- A tela ocupará o espaço inteiro da tela do dispositivo -->
+    <link rel="shortcut icon" href="../Desenvolvendo a HTML5 e as CSS3/Mídias/Imagens/adulta.ico/favicon-32x32.png" type="image/x-icon">
+    <title>HTML5 e CSS3</title>
+    <link rel="stylesheet" href="estilo.css">
+</head> 
+<body>
+<main>
+    <h1>HTML5</h1> <!-- Heading -->
+   
+    <h2>Principais formatações</h2>
+    <p>Para criar uma linha horizontal utilize a tag horizontal rule &lt;hr&gt; </p>
+    <hr>
+    <p>Para quebrar o texto em algum ponto, utilize a tag break roll &lt;br&gt;</p> <!-- &lt;TAG&gt; (less than e greater than) para simbolizar a TAG -->
+    <p>Para adicionar símbolos especiais, acesse o <a href="https://erikasarti.com/html/dingbats-simbolos-desenhos/" target="_blank">site</a> e copie o código do símbolo: &reg; &copy; &trade; &euro; &pound; &yen; &cent; &Delta; &uparrow; &#10056;</p> 
+    <p>Para adicionar emojis, acesse o <a href="https://unicode-table.com/pt/emoji/" target="_blank"> site </a> e copie e código do emoji: &#x1f596; &#x1f913;  </p>
+    <p>Para <strong>destacar</strong> (negrito) uma palavra ou frase utilize a tag &lt;strong&gt;</p> 
+    <p>Para <em>dar ênfase</em> (itálico) a uma palavra ou frase utilize a tag &lt;em&gt; </p> 
+    <p>Para criar um <mark style="background-color: cadetblue;">texto marcado</mark> utilize a tag &lt;mark&gt;  </p>
+    <p>Para criar um <small>texto pequeno</small> utilize a tag &lt;small&gt; </p>
+    <p>Para criar um <del>texto deletado</del> utilize a tag &lt;del&gt; </p>
+    <p>Para criar um <ins>texto inserido</ins> utilize a tag &lt;ins&gt;         </p>
+    <p>Para criar um <sup>texto sobrescrito</sup> utilize a tag &lt;sup&gt; </p>
+    <p>Para criar um <sub>texto subscrito</sub> utilize a tag &lt;sub&gt; </p>
+    <p>Para fazer uma <q>citação</q> utilize a tag &lt;q&gt; </p>
+    <p>Para fazer uma <blockquote cite="https://www.dell.com/pt-br">citação completa ou de bloco</blockquote> utilize a tag &lt;blockquote&gt; </p>  <!-- cite='' serve para anexar o link do material citado-->
+    <p>Para criar uma abreviação, por exemplo <abbr title="Cascading Style Sheets">CSS</abbr>, utilize a tag &lt;abbr&gt; </p>
+    <p>Para criar um <bdo dir="rtl">texto invertido</bdo> utilize a tag &lt;bdo&gt; </p> <!--Right to left-->
+        
+    <h2>Código-fonte</h2>    
+    <p>Para inserir códigos-fonte em páginas, como por exemplo <code>getElementById</code>, utilize a tag &lt;code&gt; </p>
+    <p>Para manter a identação do código-fonte utilize a tag &lt;code&gt; dentro da tag &lt;pre&gt; </p>
+    <pre>
+        <code>
+    function calcular () {
+    var txtv = window.document.querySelector('input#txtvel')
+    var res = window.document.querySelector ('div#res')
+    var vel = Number (txtv.value)
+    res.innerHTML = `<p>Sua velocidade atual é de <strong> ${vel} km/h </strong></p>`
+    if (vel > 60) {
+    res.innerHTML += `<p>Você foi <strong> multado </strong> </p>`} }
+        </code>
+    </pre>
+    
+    <h2>Listas Ordenadas</h2> <!-- <ol> </ol> Ordered List -->
+    <p>Para criar uma lista ordenada utilize a tag ordered list &lt;ol&gt; </p>
+    <ol type="1" start="0"> <!-- type="ctrl+space" e start="0" começa a partir do 0 -->
+    <li>Acordar </li> <!-- List Icon -->
+    <li>Levantar <!-- </li> é opcional -->
+    <li>Preparar café da manhã
+    </ol> 
+    
+    <h2>Listas não-ordenadas</h2> <!-- Unordered List -->
+    <p>Para criar uma lista não-ordenada utilize a tag unordered list &lt;ul&gt;</p>
+    <ul type="square"> <!-- square, circle e disc -->
+    <li>Gordura</li>
+    <li>Carboidrato</li>
+    <li>Proteína</li>
+    </ul> 
+
+    <h2>Juntando Listas Diversas</h2> <!-- Muito utilizado para criação de menu-->
+    <ol>
+    <li>NES</li>
+    <ul type="square"> 
+    <li>Mario Bros</li>
+    <ul type="circle">
+    <li>Mario Bros 1</li>
+    <li>Mario Bros 2</li>
+    </ul> 
+    </ul>
+    <li>PlayStation</li>
+    <ul type="square"> 
+    <li>FIFA</li>
+    <ul type="circle"> 
+    <li>FIFA 22</li>
+    <li>FIFA 97</li>
+    </ul>
+    </ol>
+
+    <h2>Lista de Definições</h2>
+    <p>Para criar uma lista de definições tal como um dicionário, utilize a tag definition list &lt;dl&gt;</p>
+    <p>Para definir um termo dentro dessa lista utilize a tag definition term &lt;dt&gt;</p>
+    <p>Para inserir uma definição do termo utilize a tag definition description &lt;dd&gt;</p>
+    <dl>    <!-- Definition List -->
+    <dt>HTML </dt> <!-- Defition Term -->
+    <dd>Linguagem de marcação para a criação do conteúdo de um site.    </dd> <!-- Definition Description -->
+    <dt>CSS</dt>
+    <dd>Linguagem de marcação para a criação do design de um site.</dd>
+    <dt>JavaScript</dt>
+    <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
+    </dl> 
+
+    <h2>Anexar links</h2>
+    <h3>Links Externos</h3>
+    <p>Para criar um <a href="https://www.dell.com/pt-br" target="_blank" rel="external">link</a> externo utilize a tag &lt;a&gt; </p> <!-- <a> Âncora; target="_blank" para abrir em outra aba; target="self" para abrir na mesma aba -->
+    
+    <h3>Links Internos</h3>
+    <p>Para criar um <a href="pagina2.html" rel="next">link</a> interno utilize a tag &lt;a&gt; e anexe o arquivo contido na mesma pasta</p> 
+     
+    <h3>Links para patrocinadores</h3>
+    <p>Para criar um link para o endereço do <a href="https://www.dell.com/pt-br" target="_blank" rel="nofollow">patrocinador</a> utilize a tag &lt;a&gt; </p> <!-- rel="nofollow" é um comando para o mecanismo de busca entender que se trata de um site do patrocinador -->
+
+    <h3>Links para outra pasta</h3>
+    <p>Para voltar uma pasta utilize href="../arquivo" </p>
+
+    <h3>Links para download</h3>
+      <ul>
+          <li><a href="../Desenvolvendo a HTML5 e as CSS3/Mídias/PDF/Página 2.pdf" download="Página_2.pdf">Baixar o livro em PDF </a>  </li> <!-- # link vazio; parâmetro download para baixar o arquivo -->
+          <li><a href="Mídias/ZIP/index.zip" type="application/zip">Baixar o livro compactado em ZIP </a> </li> <!-- type="application/zip" para baixar o arquivo zip; consultar a list completa no site iana.org-->
+      </ul> 
+
+    <h2>Adicionar Imagens</h2> 
+    <h3>É possível carregar imagens contidas na mesma pasta do arquivo .html</h3>
+    <p>Logo HTML5</p>
+    <img src="../Desenvolvendo a HTML5 e as CSS3/Mídias/Imagens/html5logo.png" alt="Logo HTML5"> <!-- Segure o ctrl+space para abrir o diretório da imagem-->
+    <h3>Imagens contidas em uma subpasta</h3> 
+    <p>Logo CSS3</p>    
+    <img src="../Desenvolvendo a HTML5 e as CSS3/Mídias/Imagens/css3logo.png" alt="Logo CSS3">
+    <h3>Imagens externas</h3>
+    <p>Logo JavaScript</p>
+    <img src="https://cdn.iconscout.com/icon/free/png-64/javascript-2752148-2284965.png" alt="Logo do JavaScript">
+    <h3>Ícones</h3> 
+    <img src="../Desenvolvendo a HTML5 e as CSS3/Mídias/Imagens/adulta.ico/favicon-32x32.png" alt="Ícone">
+    <h3>Imagens dinâmicas</h3>
+    <p>Imagens que vão se adaptar ao tamanho da tela do dispositivo do usuário</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="Mídias/Imagens/tamanhop.png" type="image/png">  <!-- Terceiro elemento inserido -->
+        <source media="(max-width: 1050px)" srcset="Mídias/Imagens/tamanhom.png" type="image/png">  <!-- Segundo elemento inserido -->
+        <img src="../Desenvolvendo a HTML5 e as CSS3/Mídias/Imagens/tamanhog.png" alt="Tamanho G"> <!-- Primeiro elemento inserido -->
+    </picture>
+
+    <h2>Adicionar áudios</h2>  
+    <p>Para adicionar uma lista de reprodução de áudio utilize a tag &lt;audio&gt; (controls, autoplay, loop...)</p>
+    <audio src="Mídias/Audios/Fat Man - Yung Logos.mp3" controls> </audio> 
+    <audio preload="metadata" source src="Mídias/Audios/Tell Me That I Can't (Clean) - NEFFEX.mp3" type="audio/mpeg" controls loop> </audio>   
+
+    <h2>Adicionar vídeos</h2>
+    <h3>Vídeos hospedados no servidor local </h3>
+    <p>Para adicionar um vídeo hospedado em sua máquina utilize a tag &lt;video&gt; </p>
+    <video width="200" poster="Mídias/Imagens/physalis.jpg" controls loop> <!-- É necessário inserir diversos formatos de vídeo para favorecer a compatilidade com diversos dispositivos --> 
+        <source src="../Desenvolvendo a HTML5 e as CSS3/Mídias/Videos/Physalis.m4v" type="video/mp4">
+        <source src="../Desenvolvendo a HTML5 e as CSS3/Mídias/Videos/Physalis.ogv" type="video/ogg"> 
+    </video>
+    <!-- Método alternativo  <video src="../Mídias/Videos/Physalis.ogv" width="300" controls></video> -->
+    <!-- Método alternativo  <video src="../Mídias/Videos/Video.ogv"width="400" controls> </video>  -->
+
+    <h3>Vídeos externos</h3>
+    <p>Para adicionar um vídeo do YouTube acesse o endereço, clique em "share", em seguida em "embed" e copie o código &lt;iframe&gt;</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/luImsWaNLAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+
+    <h1>CSS3</h1>
+    <p>Para economizar linhas, utilize o shorthand font: italic(font-style) -> normal(font-weigth) -> 16px(font-size) -> Arial(font-family) ou o shorthand border: width, style, color</p> 
+    
+    <h2>Fontes</h2>
+    <p>O conjunto de glifos de uma mesma familía é chamado de fonte.</p>
+       
+    <h2>Família tipográfica</h2>
+    <p>Light, normal, seminegrito(semibold), negrito(bold) e extranegrito(extrabold) </p>
+
+    <h2>Categoria de fontes</h2>
+    <p>Serifadas: traçado que guia nosso cérebro durante a leitura            </p>
+    <p>Sans-serif: sem serifa, base do glifo arredondada, sem pequenos traços </p>
+    <p>Monoespaçada: espaço lateral [G][u][s] da mesma largura  </p>
+    <p>Handwriting: letra de mão </p>
+    <p>Display ou fontes comemorativas:não possui nenhuma das características mencionadas acima.     </p>
+       
+    <h2>Tamanho de fontes</h2>
+    <p>Medidas absolutas: cm, mm, in(polegada), px(píxel) [recomendado], pt(pontos), pc(paica)  </p>
+    <p>Medidas relativas: em(altura-m) [recomendado], ex(altura-x), rem(fonte configurada no body), vw(view-width, largura da view-port), vh(altura da view-port), %.   </p>
+
+    <h2>Google Fonts</h2>
+    <p>Para importar novas fontes acesse o site https://fonts.google.com/, selecione a opção @import e copie o código dentro da html no topo da tag style ou no topo do arquivo .css</p>
+
+    <h2>Fontes externas baixadas </h2>
+    <p>Baixe a fonte e coloque-a na mesma pasta do arquivo html. No topo da tag style digite @font-face { font-family: '' ; src: url('') format (''); }     </p>
+
+    <h2>Alinhamento de texto</h2>
+    <p>Para alinhar o texto utilize a propriedade text-align: center; left; right; justify;</p>
+    <p>Para afastar o parágrafo utilize a propriedade text-indent: 30px;</p>
+
+    <h2>Seletores personalizados</h2>
+    <p>Para diferenciar o estilo de uma propriedade e de outra utilize um seletor personalizado, p.e., &lt;h1 id='principal'&gt; na seção HTML e h1#principal {}, na seção CSS</p>
+    <p>Para diferenciar o estilo de várias propriedades utilize, p.e., &lt;h2 class='customizado'&gt; na seção HTML e .customizado{}, na seção CSS</p>
+    <p>Dê nome a id e class pela função, não pela forma</p>
+    <p>Para <span>personalizar o trecho de um texto</span> utilize a tag &lt;span class=' '&gt; </p>
+
+    <h2>Pseudo-classes</h2>
+    <p>Uma pseudo-classe está relacionada ao estado de um elemento ou classe (active, checked, empty, enabled, hover...).       </p>
+    <h3>Hover</h3>
+    <p2>Para iluminar um elemento ou classe quando passar o mouse por cima, na seção CSS, digite: tag:hover {background-color; color; font;} </p2>
+    <div>Passe o mouse aqui! 
+        <p>TEXTO OCULTADO</p> </div>   
+    <h3>Visited e active</h3>    
+       <p>Para alterar a cor de um link acessado digite: tag:visited {color: yellow; }</p>
+       <p>Para alterar a cor de um link quando clicado digite: tag:active {color: red; } </p> 
+       <ul>
+       <li><a href="https://www.vw.com.br/pt.html" class='especial' target="_blank">VW</a></li>
+       <li><a href="https://www.inventeiumnomequalqueraquidkvkv.com/pt-br" target="_blank">INVENTEI</a></li>
+       <li><a href="https://www.kia.com.br/" target="_blank">KIA</a></li>
+       </ul> 
+
+    <h2>Cores</h2>   
+    <p>Para criar um gradiente de cores utilize background-image: linear-gradient(colors), dentro da tag &lt;body&gt;
+    <p>Para fazer configurações globais na CSS utilize *{ } </p>    
+    <p>Cores primárias = Amarelo, Vermelho, Azul </p>
+    <p>Cores secundárias = Laranja, Violeta, Verde </p>
+    <p>Cores terciárias =  Amarelo-esverdeado, amarelo-alaranjado, vermelho-alaranjado, vermelho-arroxeado, azul-arroxeado, azul-esverdeado </p>
+    <p>Cores complementares, análogas, análogas relacionadas, intercaladas, triádicas, em quadrado, tetrádicas, monocromáticas</p>
+    <p>Representação por códigos hexadecimais (decimais = 0 1 2 3 4 5 6 7 8 9), p.e. 16 (0 1 2 3 4 5 6 7 8 9 A B C D E F) sendo 0 o mínimo e F o máximo</p>       
+    <p>Representação em RGBA (Red, Green, Blue, Alpha/Transparência)</p>
+    <p>Representação por HSL (Hue/Matiz, Saturarion/Saturação, Luminosity/Luminosidade)</p>
+
+    <h2>Caixas</h2>
+    <p> Todo elemento visível na tela dentro de um site é uma caixa</p>
+    <p> O tamanho da caixa é especificado em duas medidas: height e width</p>
+    <p> Border (borda) é uma linha que circunda o seu conteúdo </p>
+    <p> Padding (preenchimento) é o espaço entre a borda e o texto </p>
+    <p> Margin (margem) é a linha que circunda a borda </p>
+    <p> Outline (contorno) é o traçado que circunda a borda e está dentro da margem</p>
+    
+    <h2>Tipos de caixa</h2>
+    <p></p>
+    <h3>Box-level</h3>
+    <article>
+        <p>&lt;div&gt;</p> 
+        <p> &lt;h1&gt; - &lt;h6&gt;</p> 
+        <p>&lt;p&gt;</p>
+        <p>&lt;main&gt;</p>  
+        <p>&lt;header&gt;</p>
+        <p>&lt;nav&gt;</p>
+        <p>&lt;article&gt;</p> 
+        <p>&lt;aside&gt;</p>
+        <p>&lt;footer&gt;</p>
+        <p>&lt;video&gt;</p> 
+        <p>&lt;form&gt;</p>     
+    </article>
+    <h4 id="boxlevel">Exemplo de box-level</h4>
+    <p id="boxlevel2">Parágrafos também são exemplo de box-level </p>
+    
+    <h3>Inline-level</h3>
+    <article>
+        <p>&lt;span&gt;</p> 
+        <p>&lt;a&gt;</p> 
+        <p>&lt;code&gt;</p>
+        <p>&lt;small&gt;</p>  
+        <p>&lt;strong&gt;</p>
+        <p>&lt;em&gt;</p>
+        <p>&lt;sup&gt; - &lt;sub&gt;</p> 
+        <p>&lt;label&gt;</p>
+        <p>&lt;button&gt;</p>
+        <p>&lt;input&gt;</p> 
+        <p>&lt;select&gt;</p>  
+    </article>
+
+    <h2>Grouping tags</h2>
+    <p>&lt;body&gt;</p>
+    <p>&lt;header&gt;</p>
+    <p>&lt;h1&gt;</p>
+    <p>&lt;nav&gt;</p> <!-- Para criar um menu, p.e. -->
+    <p>&lt;a&gt;</p>
+    <p>&lt;/nav&gt;</p>
+    <p>&lt;header&gt;</p>
+    <p>&lt;main&gt;</p>
+    <p>&lt;section&gt;</p>
+    <p>&lt;article&gt;</p>
+    <p>&lt;h2&gt;</p>
+    <p>&lt;/h2&gt;</p>
+    <p>&lt;aside&gt;</p>
+    <p>&lt;p&gt;</p>
+    <p>&lt;/p&gt;</p>
+    <p>&lt;/aside&gt;</p>
+    <p>&lt;/article&gt;</p>
+    <p>&lt;section&gt;</p>
+    <p>&lt;/main&gt;</p>
+    <p>&lt;footer&gt;</p>
+    <p>&lt;/footer&gt;</p>
+
+    <p>EM CONTRUÇÃO!</p>
+</main>
+
+    <footer>&copy;Gustavo</footer>
+
+
+
+</body>
+</html>
